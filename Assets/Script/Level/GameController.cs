@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -22,6 +22,42 @@ public class GameController : MonoBehaviour
 
     private float bottleUp = 0.3f; // select bottle
     private float bottleDown = -0.3f; // deselect bottle
+
+    //
+    private LevelLoader levelLoader;
+    private int currentLevel = 1;
+
+    private void Start()
+    {
+        levelLoader = GetComponent<LevelLoader>();
+        LoadCurrentLevel();
+    }
+
+    public void LoadCurrentLevel()
+    {
+        levelLoader.RenderLevel(currentLevel);
+    }
+
+    public void NextLevel()
+    {
+        currentLevel++;
+        if (currentLevel > levelLoader.GetTotalLevels())
+        {
+            currentLevel = 1; // Loop hoặc end game
+        }
+        LoadCurrentLevel();
+    }
+
+    public void PreviousLevel()
+    {
+        currentLevel--;
+        if (currentLevel < 1)
+        {
+            currentLevel = levelLoader.GetTotalLevels();
+        }
+        LoadCurrentLevel();
+    }
+
 
 
     void Update()

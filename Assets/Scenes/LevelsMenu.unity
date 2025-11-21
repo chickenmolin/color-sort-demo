@@ -1160,6 +1160,159 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIndex: 8
+--- !u!1 &477322074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477322076}
+  - component: {fileID: 477322075}
+  m_Layer: 0
+  m_Name: LevelDataGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &477322075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477322074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73828913519b2c9489acc29a440a7a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableColors: []
+  jsonFilePath: Assets/Data/levels.json
+  startLevelNumber: 1
+  endLevelNumber: 10
+  totalBottlesPerLevel: 4
+  emptyBottles: 1
+  bottleColorCounts: 01000000020000000300000004000000
+  generatedLevels:
+    levels:
+    - levelNumber: 1
+      bottles:
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 2
+      bottles:
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+    - levelNumber: 3
+      bottles:
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 4
+      bottles:
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 5
+      bottles:
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 2
+        colorIndices: 01000000010000000000000000000000
+    - levelNumber: 6
+      bottles:
+      - colorCount: 2
+        colorIndices: 02000000020000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 2
+        colorIndices: 01000000010000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 7
+      bottles:
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+    - levelNumber: 8
+      bottles:
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+    - levelNumber: 9
+      bottles:
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+    - levelNumber: 10
+      bottles:
+      - colorCount: 2
+        colorIndices: 01000000010000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 3
+        colorIndices: 02000000020000000200000000000000
+--- !u!4 &477322076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477322074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.32311967, y: -1.0784678, z: 0.031232063}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532596821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1849,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIndex: 5
+--- !u!1 &961032523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961032525}
+  - component: {fileID: 961032524}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &961032524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961032523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a432f23aa471c9f499ae944ddbd4bb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFilePath: Assets/Data/levels.json
+  bottlePrefab: {fileID: 1434057968490450135, guid: 0c859c9449738a54a86421b919571070, type: 3}
+  bottleColors:
+  - {r: 1, g: 0.033018887, b: 0.033018887, a: 0}
+  - {r: 0, g: 0.05740881, b: 1, a: 0}
+  - {r: 0, g: 1, b: 0.10835743, a: 0}
+  - {r: 0.9811321, g: 0.9717528, b: 0.0786757, a: 0}
+  bottleSpacing: 2
+  bottlesPerRow: 3
+  rowHeight: 3
+  startPosition: {x: 0, y: 0, z: 0}
+--- !u!4 &961032525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961032523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.32311967, y: -1.0784678, z: 0.031232063}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &984999773
 GameObject:
   m_ObjectHideFlags: 0
