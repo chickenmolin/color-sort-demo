@@ -70,19 +70,21 @@ public class LevelDataGenerator : MonoBehaviour
             return;
         }
 
-        generatedLevels.levels.Clear();
+        // ❗ XÓA ĐÚNG CÁC LEVEL ĐƯỢC TẠO LẠI
+        generatedLevels.levels.RemoveAll(l =>
+            l.levelNumber >= startLevelNumber &&
+            l.levelNumber <= endLevelNumber);
 
         for (int levelNum = startLevelNumber; levelNum <= endLevelNumber; levelNum++)
         {
             LevelData newLevel = new LevelData { levelNumber = levelNum };
 
-            // Tạo các ống có màu
             int bottleIndex = 0;
+
             for (int colorIdx = 0; colorIdx < bottleColorCounts.Count; colorIdx++)
             {
                 int countForThisColor = bottleColorCounts[colorIdx];
 
-                // Chia màu này vào các ống
                 for (int i = 0; i < countForThisColor; i++)
                 {
                     if (bottleIndex >= totalBottlesPerLevel - emptyBottles)
@@ -90,14 +92,12 @@ public class LevelDataGenerator : MonoBehaviour
 
                     BottleData bottle = new BottleData();
 
-                    // Mỗi ống chứa 1-4 lớp của cùng một màu
-                    int layersInThisBottle = Random.Range(1, Mathf.Min(5, countForThisColor - i + 1));
+                    int layersInThisBottle =
+                        Random.Range(1, Mathf.Min(5, countForThisColor - i + 1));
                     bottle.colorCount = layersInThisBottle;
 
                     for (int layer = 0; layer < layersInThisBottle; layer++)
-                    {
                         bottle.colorIndices[layer] = colorIdx;
-                    }
 
                     newLevel.bottles.Add(bottle);
                     bottleIndex++;
@@ -105,27 +105,23 @@ public class LevelDataGenerator : MonoBehaviour
                 }
             }
 
-            // Thêm các ống rỗng
+            // Empty bottles
             for (int i = 0; i < emptyBottles; i++)
-            {
-                BottleData emptyBottle = new BottleData { colorCount = 0 };
-                newLevel.bottles.Add(emptyBottle);
-            }
+                newLevel.bottles.Add(new BottleData());
 
-            // Shuffle bottles
+            // Shuffle
             for (int i = newLevel.bottles.Count - 1; i > 0; i--)
             {
-                int randomIndex = Random.Range(0, i + 1);
-                BottleData temp = newLevel.bottles[i];
-                newLevel.bottles[i] = newLevel.bottles[randomIndex];
-                newLevel.bottles[randomIndex] = temp;
+                int r = Random.Range(0, i + 1);
+                var tmp = newLevel.bottles[i];
+                newLevel.bottles[i] = newLevel.bottles[r];
+                newLevel.bottles[r] = tmp;
             }
 
             generatedLevels.levels.Add(newLevel);
         }
 
-        EditorUtility.DisplayDialog("Success",
-            $"Generated {generatedLevels.levels.Count} levels!", "OK");
+        EditorUtility.DisplayDialog("Success", $"Generated Levels Completed!", "OK");
     }
 
     public void SaveToJSON()

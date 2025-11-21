@@ -1191,54 +1191,218 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableColors: []
   jsonFilePath: Assets/Data/levels.json
-  startLevelNumber: 1
-  endLevelNumber: 10
-  totalBottlesPerLevel: 4
-  emptyBottles: 1
-  bottleColorCounts: 01000000020000000300000004000000
+  startLevelNumber: 11
+  endLevelNumber: 20
+  totalBottlesPerLevel: 6
+  emptyBottles: 2
+  bottleColorCounts: 020000000100000001000000
   generatedLevels:
     levels:
     - levelNumber: 1
       bottles:
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
       - colorCount: 0
         colorIndices: 00000000000000000000000000000000
-      - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
-      - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
-      - colorCount: 1
+      - colorCount: 0
         colorIndices: 00000000000000000000000000000000
     - levelNumber: 2
       bottles:
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
       - colorCount: 0
         colorIndices: 00000000000000000000000000000000
-      - colorCount: 1
+      - colorCount: 0
         colorIndices: 00000000000000000000000000000000
-      - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
-      - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
     - levelNumber: 3
       bottles:
       - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
+        colorIndices: 00000000000000000000000000000000
       - colorCount: 1
         colorIndices: 01000000000000000000000000000000
       - colorCount: 0
         colorIndices: 00000000000000000000000000000000
-      - colorCount: 1
+      - colorCount: 0
         colorIndices: 00000000000000000000000000000000
     - levelNumber: 4
       bottles:
       - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
         colorIndices: 01000000000000000000000000000000
+    - levelNumber: 5
+      bottles:
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+    - levelNumber: 6
+      bottles:
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 7
+      bottles:
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 8
+      bottles:
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 9
+      bottles:
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 10
+      bottles:
       - colorCount: 1
         colorIndices: 01000000000000000000000000000000
       - colorCount: 0
         colorIndices: 00000000000000000000000000000000
       - colorCount: 1
         colorIndices: 00000000000000000000000000000000
-    - levelNumber: 5
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 11
+      bottles:
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 2
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 12
+      bottles:
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 13
+      bottles:
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 2
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+    - levelNumber: 14
+      bottles:
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 15
+      bottles:
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 2
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 16
+      bottles:
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 17
+      bottles:
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 2
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 18
+      bottles:
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 02000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 00000000000000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
+      - colorCount: 0
+        colorIndices: 00000000000000000000000000000000
+    - levelNumber: 19
       bottles:
       - colorCount: 1
         colorIndices: 00000000000000000000000000000000
@@ -1246,19 +1410,13 @@ MonoBehaviour:
         colorIndices: 02000000000000000000000000000000
       - colorCount: 0
         colorIndices: 00000000000000000000000000000000
-      - colorCount: 2
-        colorIndices: 01000000010000000000000000000000
-    - levelNumber: 6
-      bottles:
-      - colorCount: 2
-        colorIndices: 02000000020000000000000000000000
+      - colorCount: 1
+        colorIndices: 01000000000000000000000000000000
       - colorCount: 1
         colorIndices: 00000000000000000000000000000000
-      - colorCount: 2
-        colorIndices: 01000000010000000000000000000000
       - colorCount: 0
         colorIndices: 00000000000000000000000000000000
-    - levelNumber: 7
+    - levelNumber: 20
       bottles:
       - colorCount: 1
         colorIndices: 00000000000000000000000000000000
@@ -1266,38 +1424,12 @@ MonoBehaviour:
         colorIndices: 01000000000000000000000000000000
       - colorCount: 0
         colorIndices: 00000000000000000000000000000000
-      - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
-    - levelNumber: 8
-      bottles:
-      - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
-      - colorCount: 1
-        colorIndices: 00000000000000000000000000000000
       - colorCount: 0
         colorIndices: 00000000000000000000000000000000
       - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
-    - levelNumber: 9
-      bottles:
-      - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
-      - colorCount: 0
-        colorIndices: 00000000000000000000000000000000
+        colorIndices: 02000000000000000000000000000000
       - colorCount: 1
         colorIndices: 00000000000000000000000000000000
-      - colorCount: 1
-        colorIndices: 01000000000000000000000000000000
-    - levelNumber: 10
-      bottles:
-      - colorCount: 2
-        colorIndices: 01000000010000000000000000000000
-      - colorCount: 1
-        colorIndices: 00000000000000000000000000000000
-      - colorCount: 0
-        colorIndices: 00000000000000000000000000000000
-      - colorCount: 3
-        colorIndices: 02000000020000000200000000000000
 --- !u!4 &477322076
 Transform:
   m_ObjectHideFlags: 0
