@@ -15,14 +15,14 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        0,
+                        2,
                         0,
                         0,
                         0
                     ]
                 },
                 {
-                    "colorCount": 0,
+                    "colorCount": 1,
                     "colorIndices": [
                         0,
                         0,
@@ -47,6 +47,24 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
                         0,
                         0,
                         0,
@@ -56,25 +74,7 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        1,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
+                        2,
                         0,
                         0,
                         0
@@ -95,6 +95,15 @@
                     ]
                 },
                 {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
                     "colorCount": 1,
                     "colorIndices": [
                         1,
@@ -104,18 +113,9 @@
                     ]
                 },
                 {
-                    "colorCount": 0,
+                    "colorCount": 1,
                     "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
+                        2,
                         0,
                         0,
                         0
@@ -145,9 +145,9 @@
                     ]
                 },
                 {
-                    "colorCount": 0,
+                    "colorCount": 1,
                     "colorIndices": [
-                        0,
+                        1,
                         0,
                         0,
                         0
@@ -156,7 +156,7 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        1,
+                        2,
                         0,
                         0,
                         0
@@ -168,15 +168,6 @@
             "levelNumber": 5,
             "bottles": [
                 {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
                     "colorCount": 1,
                     "colorIndices": [
                         0,
@@ -189,6 +180,15 @@
                     "colorCount": 0,
                     "colorIndices": [
                         0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
                         0,
                         0,
                         0
@@ -209,9 +209,27 @@
             "levelNumber": 6,
             "bottles": [
                 {
-                    "colorCount": 1,
+                    "colorCount": 2,
                     "colorIndices": [
                         1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
                         0,
                         0,
                         0
@@ -220,25 +238,7 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
+                        2,
                         0,
                         0,
                         0
@@ -250,18 +250,27 @@
             "levelNumber": 7,
             "bottles": [
                 {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
+                    "colorCount": 2,
                     "colorIndices": [
                         1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
                         0,
                         0,
                         0
@@ -277,7 +286,7 @@
                     ]
                 },
                 {
-                    "colorCount": 0,
+                    "colorCount": 1,
                     "colorIndices": [
                         0,
                         0,
@@ -291,16 +300,25 @@
             "levelNumber": 8,
             "bottles": [
                 {
-                    "colorCount": 0,
+                    "colorCount": 1,
                     "colorIndices": [
-                        0,
+                        2,
                         0,
                         0,
                         0
                     ]
                 },
                 {
-                    "colorCount": 0,
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
                     "colorIndices": [
                         0,
                         0,
@@ -319,6 +337,15 @@
                 },
                 {
                     "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
                     "colorIndices": [
                         0,
                         0,
@@ -334,116 +361,7 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
-                        1,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                }
-            ]
-        },
-        {
-            "levelNumber": 10,
-            "bottles": [
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
-                        1,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                }
-            ]
-        },
-        {
-            "levelNumber": 11,
-            "bottles": [
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
                         2,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
-                        1,
                         0,
                         0,
                         0
@@ -457,12 +375,98 @@
                         0,
                         0
                     ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
                 }
             ]
         },
         {
-            "levelNumber": 12,
+            "levelNumber": 10,
             "bottles": [
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 11,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
                 {
                     "colorCount": 1,
                     "colorIndices": [
@@ -482,18 +486,9 @@
                     ]
                 },
                 {
-                    "colorCount": 1,
+                    "colorCount": 0,
                     "colorIndices": [
                         0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
-                        1,
                         0,
                         0,
                         0
@@ -504,6 +499,47 @@
                     "colorIndices": [
                         2,
                         0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 12,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
                         0,
                         0
                     ]
@@ -525,6 +561,24 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
                         2,
                         0,
                         0,
@@ -532,7 +586,7 @@
                     ]
                 },
                 {
-                    "colorCount": 2,
+                    "colorCount": 0,
                     "colorIndices": [
                         0,
                         0,
@@ -541,7 +595,7 @@
                     ]
                 },
                 {
-                    "colorCount": 0,
+                    "colorCount": 1,
                     "colorIndices": [
                         0,
                         0,
@@ -561,7 +615,7 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        1,
+                        0,
                         0,
                         0,
                         0
@@ -593,7 +647,7 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        0,
+                        1,
                         0,
                         0,
                         0
@@ -610,6 +664,15 @@
                 },
                 {
                     "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
                     "colorIndices": [
                         0,
                         0,
@@ -634,24 +697,6 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        2,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 2,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
                         0,
                         0,
                         0,
@@ -661,7 +706,34 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
                         1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
                         0,
                         0,
                         0
@@ -682,9 +754,9 @@
             "levelNumber": 16,
             "bottles": [
                 {
-                    "colorCount": 1,
+                    "colorCount": 0,
                     "colorIndices": [
-                        1,
+                        0,
                         0,
                         0,
                         0
@@ -704,6 +776,24 @@
                     "colorIndices": [
                         0,
                         0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
                         0,
                         0
                     ]
@@ -712,24 +802,6 @@
                     "colorCount": 1,
                     "colorIndices": [
                         2,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
                         0,
                         0,
                         0
@@ -743,34 +815,7 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
-                        2,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
                         1,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
                         0,
                         0,
                         0
@@ -784,6 +829,42 @@
                         0,
                         0
                     ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
                 }
             ]
         },
@@ -792,6 +873,15 @@
             "bottles": [
                 {
                     "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
                     "colorIndices": [
                         0,
                         0,
@@ -818,7 +908,7 @@
                     ]
                 },
                 {
-                    "colorCount": 1,
+                    "colorCount": 2,
                     "colorIndices": [
                         0,
                         0,
@@ -830,15 +920,6 @@
                     "colorCount": 1,
                     "colorIndices": [
                         1,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
                         0,
                         0,
                         0
@@ -850,10 +931,19 @@
             "levelNumber": 19,
             "bottles": [
                 {
-                    "colorCount": 1,
+                    "colorCount": 0,
                     "colorIndices": [
                         0,
                         0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
                         0,
                         0
                     ]
@@ -868,24 +958,6 @@
                     ]
                 },
                 {
-                    "colorCount": 0,
-                    "colorIndices": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "colorCount": 1,
-                    "colorIndices": [
-                        1,
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
                     "colorCount": 1,
                     "colorIndices": [
                         0,
@@ -896,6 +968,15 @@
                 },
                 {
                     "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
                     "colorIndices": [
                         0,
                         0,
@@ -920,6 +1001,900 @@
                 {
                     "colorCount": 1,
                     "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 21,
+            "bottles": [
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 22,
+            "bottles": [
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 23,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 24,
+            "bottles": [
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 25,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 26,
+            "bottles": [
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 27,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 28,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 29,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 30,
+            "bottles": [
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 31,
+            "bottles": [
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 32,
+            "bottles": [
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 33,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 34,
+            "bottles": [
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        2,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 2,
+                    "colorIndices": [
+                        1,
+                        1,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "levelNumber": 35,
+            "bottles": [
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
+                        1,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
+                    "colorIndices": [
                         1,
                         0,
                         0,
@@ -937,6 +1912,15 @@
                 },
                 {
                     "colorCount": 0,
+                    "colorIndices": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "colorCount": 1,
                     "colorIndices": [
                         0,
                         0,
