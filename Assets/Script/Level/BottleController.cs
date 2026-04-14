@@ -8,43 +8,45 @@ using System.Linq;
 
 public class BottleController : MonoBehaviour
 {
-    [SerializeField] Color[] bottleColors;
-    [SerializeField] SpriteRenderer bottleMaskSR;
-
-    [SerializeField] AnimationCurve ScaleAndRotationMutiplaierCurve;
-    [SerializeField] AnimationCurve FillAmountCurve;
-    [SerializeField] AnimationCurve RotaationSpeedMultiplaier;
-
-    [SerializeField] float[] fillAmounts;
+// Mảng chứa màu trong chai (tối đa 4 lớp) 
+    [SerializeField] Color[] bottleColors; 
+    // Sprite dùng shader để hiển thị nước 
+    [SerializeField] SpriteRenderer bottleMaskSR; 
+    // Curve để điều khiển animation (scale + xoay + tốc độ) 
+    [SerializeField] AnimationCurve ScaleAndRotationMutiplaierCurve; 
+    [SerializeField] AnimationCurve FillAmountCurve; 
+    [SerializeField] AnimationCurve RotaationSpeedMultiplaier; 
+    
+    // Giá trị fill tương ứng với số lượng màu 
+    [SerializeField] float[] fillAmounts; 
+    // Giá trị góc xoay tương ứng 
     [SerializeField] float[] rotationValues;
+    private int rotationIndex; // index để lấy góc xoay phù hợp 
+    // Số lượng màu hiện tại trong chai (0 → 4) 
+    [Range(0,4)] public int numberOfColorsInBottle = 4; 
+    // Màu trên cùng của chai 
+    public Color topColor; 
+    // Số lớp liên tiếp cùng màu ở trên cùng 
+    public int numberOfTopColorLayer = 0; 
+    // Tham chiếu đến chai sẽ được rót vào 
+    public BottleController bottleControllerRef; 
+    // Số màu/layer sẽ được chuyển 
+    private int numberOfColorsToTranfer = 0; 
+    private int numberOfLayersToTranfer = 0; 
+    // 2 điểm xoay (trái/phải) để tạo hiệu ứng rót 
+    [SerializeField] Transform leftRotationPoint; 
+    [SerializeField] Transform rightRotationPoint;     
+    private Transform chosenRotationPoint; 
+    private float directionMultiplaier = 1.0f; // hướng xoay
 
-    private int rotationIndex;
-
-
-    [Range(0,4)] [SerializeField] public int numberOfColorsInBottle = 4;
-
-    [SerializeField] public Color topColor; 
-    [SerializeField] public int numberOfTopColorLayer = 0;
-
-    [SerializeField] public BottleController bottleControllerRef;  //second bottle
-
-    private int numberOfColorsToTranfer = 0;
-    private int numberOfLayersToTranfer = 0;
-
-
-    [SerializeField] Transform leftRotationPoint;
-    [SerializeField] Transform rightRotationPoint;
-    private Transform chosenRotationPoint;
-
-    private float directionMultiplaier = 1.0f;
-
+    // Dùng cho animation di chuyển
     Vector3 startPosition;
     Vector3 endPosition;
     Vector3 originalPosition;
 
     public LineRenderer lineRenderer;
 
-    [SerializeField] float timeToRotate = 1.0f;
+    [SerializeField] float timeToRotate = 1.0f; // thời gian xoay
 
 
     GameController myObj1 = new GameController();
@@ -59,18 +61,19 @@ public class BottleController : MonoBehaviour
 
     void Start()
     {
-        originalPosition = transform.position;
-
-        bottleMaskSR.material.SetFloat("_FillAmount", fillAmounts[numberOfColorsInBottle]);
-
-        UpdateColorsOnShader();
-
+        // Lưu vị trí ban đầu 
+        originalPosition = transform.position; 
+        // Set mức fill ban đầu theo số màu 
+        bottleMaskSR.material.SetFloat("_FillAmount", fillAmounts[numberOfColorsInBottle]); 
+        // Update màu lên shader 
+        UpdateColorsOnShader(); 
+        // Xác định màu trên cùng 
         UpdateTopColorValue();
     }
 
     void Update()
     {
-
+        // Giới hạn số màu từ 0 → 4 (tránh lỗi)
         numberOfColorsInBottle = numberOfColorsInBottle > 4? 4 : numberOfColorsInBottle;
         numberOfColorsInBottle = numberOfColorsInBottle < 0? 0 : numberOfColorsInBottle;
 
@@ -80,11 +83,13 @@ public class BottleController : MonoBehaviour
 
             if(bottleControllerRef.FillBottleCheck(topColor))
             {
+                // Xác định điểm xoay + hướng
                 chosenRotationPointAndDirection();
-
+                // Tính số lượng màu có thể chuyển
                 numberOfColorsToTranfer = Mathf.Min(numberOfTopColorLayer, 4 - bottleControllerRef.numberOfColorsInBottle);
                 numberOfLayersToTranfer = Mathf.Min(numberOfTopColorLayer, 4 - bottleControllerRef.numberOfColorsInBottle);
 
+                // Copy màu sang chai đích
                 for(int i = 0 ; i < numberOfColorsToTranfer ; i++)
                 {
                     bottleControllerRef.bottleColors[bottleControllerRef.numberOfColorsInBottle + i ] = topColor;
@@ -98,8 +103,10 @@ public class BottleController : MonoBehaviour
             //     myObj1.SecondBottle = null;
             // }
 
+            // Tính góc xoay phù hợp
             CalculateRotationIndex(4 - bottleControllerRef.numberOfColorsInBottle);
 
+            
              StartCoroutine(MoveBottle()); 
 
         }
@@ -110,7 +117,7 @@ public class BottleController : MonoBehaviour
     {
 
         startPosition = transform.position;
-
+        // Xác định vị trí đích (trái/phải)
         if(chosenRotationPoint == leftRotationPoint)
         {
             endPosition = bottleControllerRef.rightRotationPoint.position;
@@ -134,6 +141,7 @@ public class BottleController : MonoBehaviour
 
         transform.position = endPosition;
 
+        // Sau khi di chuyển xong → xoay chai
          StartCoroutine(RotateBottle());
     }
 
