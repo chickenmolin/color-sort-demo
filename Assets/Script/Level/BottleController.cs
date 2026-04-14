@@ -169,16 +169,20 @@ public class BottleController : MonoBehaviour
         bottleMaskSR.sortingOrder -= 2;
       
         UnlockAll();
-        StartCoroutine( LockBottle() );  // if bottle is full lock it
+        StartCoroutine( LockBottle() );  // neu ong full thi dong
 
     }
-
+    // Hàm bắt đầu quá trình rót màu từ chai này sang chai khác
     public void startColorTransfer()
     {
-        LockAll();
+        LockAll();// Khóa toàn bộ chai (tránh user click nhiều lần khi animation đang chạy)
 
+        // Xác định điểm xoay (trái/phải) và hướng xoay
         chosenRotationPointAndDirection();
 
+        // Tính số lượng màu có thể chuyển: 
+        // - Không vượt quá số layer cùng màu trên cùng 
+        // - Không vượt quá dung lượng còn trống của chai đích
         numberOfColorsToTranfer = Mathf.Min(numberOfTopColorLayer, 4 - bottleControllerRef.numberOfColorsInBottle);
         numberOfLayersToTranfer = Mathf.Min(numberOfTopColorLayer, 4 - bottleControllerRef.numberOfColorsInBottle);
 
@@ -189,7 +193,8 @@ public class BottleController : MonoBehaviour
         }
 
         bottleControllerRef.UpdateColorsOnShader();
-
+        
+        // Tính toán góc xoay phù hợp dựa trên số lượng sẽ rót
         CalculateRotationIndex(4 - bottleControllerRef.numberOfColorsInBottle);
 
         transform.GetComponent<SpriteRenderer>().sortingOrder += 2;
@@ -206,21 +211,23 @@ public class BottleController : MonoBehaviour
         bottleMaskSR.material.SetColor("_Color04", bottleColors[3]);
     }
 
-    IEnumerator RotateBottle()
+    // Coroutine xử lý animation xoay chai + rót nước
+    IEnumerator RotateBottle() 
     {
         float t = 0f;
         float lerpValue;
-        float angleVlaue;
+        float angleVlaue; // góc xoay hiện tại
 
-        float lastAngleValue  = 0f;
+        float lastAngleValue  = 0f;// lưu góc frame trước để tính delta
 
         while(t < timeToRotate)
         {
-            lerpValue = t / timeToRotate;
+            lerpValue = t / timeToRotate; // Chuẩn hóa thời gian về 0 → 1
+            // góc xoay từ 0 → góc tối đa
             angleVlaue = Mathf.Lerp(0.0f, directionMultiplaier * rotationValues[rotationIndex], lerpValue);
-            
+            // Xoay chai quanh điểm
             transform.RotateAround(chosenRotationPoint.position, Vector3.forward, lastAngleValue - angleVlaue);
-
+            // Update hiệu ứng scale + rotation trong shader
             bottleMaskSR.material.SetFloat("_ScaleAndRotationMultiplaier",
                                              ScaleAndRotationMutiplaierCurve.Evaluate(angleVlaue));
            
@@ -240,10 +247,11 @@ public class BottleController : MonoBehaviour
                     lineRenderer.enabled = true;
                 }
 
+                // Giảm lượng nước trong chai nguồn
                 bottleMaskSR.material.SetFloat("_FillAmount", FillAmountCurve.Evaluate(angleVlaue)); // First bottle
-
+                // Tính lượng nước đã đổ trong frame này
                 addedAmount = FillAmountCurve.Evaluate(lastAngleValue) - FillAmountCurve.Evaluate(angleVlaue) ;
-
+                // Tăng lượng nước cho chai đích
                 bottleControllerRef.FillUp(addedAmount);
             }
 
@@ -260,6 +268,7 @@ public class BottleController : MonoBehaviour
                                          ScaleAndRotationMutiplaierCurve.Evaluate(angleVlaue));
         bottleMaskSR.material.SetFloat("_FillAmount", FillAmountCurve.Evaluate(angleVlaue));
 
+        // Cập nhật lại số lượng màu thực tế sau khi rót xong
         numberOfColorsInBottle -= numberOfColorsToTranfer;
 
         bottleControllerRef.numberOfColorsInBottle += numberOfColorsToTranfer;
