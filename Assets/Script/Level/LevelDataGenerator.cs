@@ -70,7 +70,7 @@ public class LevelDataGenerator : MonoBehaviour
             return;
         }
 
-        // ❗ XÓA ĐÚNG CÁC LEVEL ĐƯỢC TẠO LẠI
+        //XÓA ĐÚNG CÁC LEVEL ĐƯỢC TẠO LẠI
         generatedLevels.levels.RemoveAll(l =>
             l.levelNumber >= startLevelNumber &&
             l.levelNumber <= endLevelNumber);
@@ -174,95 +174,61 @@ public class LevelDataGenerator : MonoBehaviour
     }
 }
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR  // Chỉ trong Editor, không ảnh hưởng build game
 [CustomEditor(typeof(LevelDataGenerator))]
 public class LevelDataGeneratorEditor : Editor
 {
-    private bool showColorCounts = true;
-    private bool showGeneratedLevels = false;
+    private bool showColorCounts = true;    // Ẩn/hiện phần cấu hình màu
+    private bool showGeneratedLevels = false; // Ẩn/hiện phần preview màn chơi
 
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
-
+        DrawDefaultInspector(); // Vẽ các field mặc định của Inspector
         LevelDataGenerator generator = (LevelDataGenerator)target;
 
-        GUILayout.Space(20);
-        GUILayout.Label("Configuration", EditorStyles.boldLabel);
-
-        // Bottle Color Counts
+        // === CẤU HÌNH SỐ CHAI THEO MÀU ===
         showColorCounts = EditorGUILayout.Foldout(showColorCounts, 
             "Bottle Color Counts (" + generator.bottleColorCounts?.Count + ")");
         
         if (showColorCounts)
         {
-            EditorGUI.indentLevel++;
-
             for (int i = 0; i < generator.bottleColorCounts.Count; i++)
             {
                 EditorGUILayout.BeginHorizontal();
-                
                 EditorGUILayout.LabelField("Color " + i, GUILayout.Width(60));
                 generator.bottleColorCounts[i] = EditorGUILayout.IntField(
-                    generator.bottleColorCounts[i], GUILayout.Width(100));
-                
-                EditorGUILayout.LabelField("bottles", GUILayout.Width(60));
-
+                    generator.bottleColorCounts[i], GUILayout.Width(100)); // Chỉnh số chai
                 if (GUILayout.Button("X", GUILayout.Width(25)))
-                {
-                    generator.RemoveColorCount(i);
-                }
-
+                    generator.RemoveColorCount(i); // Xóa màu này
                 EditorGUILayout.EndHorizontal();
             }
-
             if (GUILayout.Button("Add Color", GUILayout.Height(25)))
-            {
-                generator.AddColorCount();
-            }
-
-            EditorGUI.indentLevel--;
+                generator.AddColorCount(); // Thêm màu mới
         }
 
-        GUILayout.Space(20);
-        GUILayout.Label("Generation & Save", EditorStyles.boldLabel);
-
+        // === CÁC NÚT THAO TÁC CHÍNH ===
         if (GUILayout.Button("GENERATE LEVELS", GUILayout.Height(35)))
-        {
-            generator.GenerateLevels();
-        }
+            generator.GenerateLevels();   // Tạo màn chơi theo cấu hình
 
         if (GUILayout.Button("SAVE TO JSON", GUILayout.Height(35)))
-        {
-            generator.SaveToJSON();
-        }
+            generator.SaveToJSON();       // Lưu ra file JSON
 
         if (GUILayout.Button("LOAD FROM JSON", GUILayout.Height(35)))
-        {
-            generator.LoadFromJSON();
-        }
+            generator.LoadFromJSON();     // Tải từ file JSON
 
         if (GUILayout.Button("CLEAR ALL", GUILayout.Height(35)))
-        {
-            generator.ClearLevels();
-        }
+            generator.ClearLevels();      // Xóa toàn bộ
 
-        // Display generated levels
-        GUILayout.Space(20);
+        // === PREVIEW CÁC MÀN ĐÃ TẠO ===
         showGeneratedLevels = EditorGUILayout.Foldout(showGeneratedLevels, 
             "Generated Levels Preview (" + generator.generatedLevels?.levels?.Count + ")");
         
         if (showGeneratedLevels && generator.generatedLevels?.levels != null)
         {
-            EditorGUI.indentLevel++;
-
             foreach (LevelData level in generator.generatedLevels.levels)
-            {
-                EditorGUILayout.LabelField("Level " + level.levelNumber + " (" + level.bottles.Count + " bottles)", 
+                EditorGUILayout.LabelField(  // Hiện tên + số chai mỗi màn
+                    "Level " + level.levelNumber + " (" + level.bottles.Count + " bottles)", 
                     EditorStyles.boldLabel);
-            }
-
-            EditorGUI.indentLevel--;
         }
     }
 }
