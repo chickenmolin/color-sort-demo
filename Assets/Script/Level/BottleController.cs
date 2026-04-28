@@ -5,6 +5,73 @@ using UnityEditor;
 using System;
 using System.Linq;
 
+// 1. Công dụng file:
+// - Điều khiển logic chai nước trong game (kiểu Water Sort)
+// - Xử lý đổ màu giữa các chai
+// - Quản lý animation: di chuyển, xoay, hiệu ứng nước
+// - Cập nhật hiển thị nước bằng shader
+
+// 2. Các mục quan trọng:
+
+// a) Dữ liệu chính:
+// - bottleColors: mảng chứa màu trong chai (tối đa 4)
+// - numberOfColorsInBottle: số lớp màu hiện tại
+// - topColor: màu trên cùng
+// - numberOfTopColorLayer: số lớp cùng màu ở trên cùng
+// - bottleControllerRef: tham chiếu chai đích
+
+// b) Hiển thị & animation:
+// - bottleMaskSR: SpriteRenderer dùng shader hiển thị nước
+// - fillAmounts: mức fill tương ứng số màu
+// - rotationValues: góc xoay khi rót
+// - AnimationCurve: điều khiển tốc độ, xoay, fill
+// - lineRenderer: hiệu ứng dòng nước khi rót
+
+// c) Hàm khởi tạo:
+// - Start(): set vị trí ban đầu, fill, màu, topColor
+
+// d) Logic chính:
+// - Update():
+//   + Kiểm tra click chuột
+//   + Kiểm tra có thể rót (FillBottleCheck)
+//   + Tính số lượng màu cần chuyển
+//   + Copy màu sang chai đích
+//   + Bắt đầu animation (MoveBottle)
+
+// e) Animation:
+// - MoveBottle(): di chuyển chai đến vị trí rót
+// - RotateBottle(): xoay chai + đổ nước (logic chính)
+// - RotateBottlrBack(): xoay lại vị trí ban đầu
+// - MoveBottleBack(): trả chai về chỗ cũ
+
+// f) Xử lý màu:
+// - UpdateTopColorValue(): xác định màu trên cùng + số layer giống nhau
+// - UpdateColorsOnShader(): cập nhật màu lên shader
+
+// g) Điều kiện rót:
+// - FillBottleCheck(): kiểm tra có rót được không
+//   + Chai rỗng → OK
+//   + Cùng màu → OK
+//   + Đầy hoặc khác màu → không cho
+
+// h) Tính toán:
+// - CalculateRotationIndex(): tính góc xoay phù hợp
+// - FillUp(): tăng lượng nước chai đích
+
+// i) Điều khiển tương tác:
+// - LockAll(): khóa tất cả chai khi đang rót
+// - UnlockAll(): mở khóa sau khi xong
+// - LockBottle(): khóa chai nếu đã full cùng màu
+
+// j) Hiệu ứng:
+// - PlayBoilingSound(): âm thanh khi rót
+// - lineRenderer: vẽ dòng nước
+
+// k) Fix lỗi:
+// - FixAmount(): chỉnh lại lượng nước cho chính xác (tránh sai số float)
+
+// l) Hỗ trợ:
+// - chosenRotationPointAndDirection(): chọn hướng xoay trái/phải
 
 public class BottleController : MonoBehaviour
 {
@@ -290,18 +357,20 @@ public class BottleController : MonoBehaviour
         float lastAngleValue = directionMultiplaier * rotationValues[rotationIndex];
 
 
-        while(t < timeToRotate)
+        while(t < timeToRotate) // Vòng lặp trong suốt thời gian quay
         {
-            StartCoroutine(FixAmount());
-            lerpValue = t / timeToRotate;
+            StartCoroutine(FixAmount()); // Sửa lượng chất lỏng trong chai mỗi frame
+            lerpValue = t / timeToRotate; 
+            
+            // suy góc từ góc hiện tại về 0 (quay ngược về vị trí gốc)
             angleVlaue = Mathf.Lerp(directionMultiplaier * rotationValues[rotationIndex], 0f, lerpValue);
-
+            // Xoay chai quanh điểm cố định
             transform.RotateAround(chosenRotationPoint.position, Vector3.forward, lastAngleValue - angleVlaue);
-
+            // Cập nhật shader hiệu ứng chất lỏng
             bottleMaskSR.material.SetFloat("_ScaleAndRotationMultiplaier",
                                              ScaleAndRotationMutiplaierCurve.Evaluate(angleVlaue));
  
-            lastAngleValue = angleVlaue;
+            lastAngleValue = angleVlaue;// Lưu góc frame này cho frame tiếp theo
 
             t+=  Time.deltaTime ;
 
@@ -403,17 +472,20 @@ public class BottleController : MonoBehaviour
         }
     }
 
+    // Tính index góc quay dựa trên số ô trống của chai đích và số màu hiện tại
     private void CalculateRotationIndex(int numberOfEmptyspacesInSecondBottle)
     {
         rotationIndex = 3 - (numberOfColorsInBottle - Mathf.Min(numberOfEmptyspacesInSecondBottle,
                              numberOfTopColorLayer));
     }
 
+    // Tăng mức chất lỏng trong chai (cập nhật shader)
     private void FillUp(float fillAmounToAdd)
     {
         bottleMaskSR.material.SetFloat("_FillAmount", bottleMaskSR.material.GetFloat("_FillAmount") + fillAmounToAdd - 0.001f);
     }
 
+    // Xác định điểm xoay và chiều quay dựa vào vị trí tương đối giữa 2 chai
     private void chosenRotationPointAndDirection()
     {
         if(transform.position.x > bottleControllerRef.transform.position.x)
@@ -440,11 +512,12 @@ public class BottleController : MonoBehaviour
         }
     }
 
-    private void PlayBoilingSound() // boilin sound
+    private void PlayBoilingSound() 
     {
         boilingSound.Play();
     }
 
+    // Khóa toàn bộ chai - ngăn người chơi chạm vào chai khác khi đang đổ
     private void LockAll() // Cant move more than one bottle in the same time
     {
        levelbottles =  GameObject.FindGameObjectsWithTag("bottle");
@@ -454,6 +527,7 @@ public class BottleController : MonoBehaviour
         }
     }
 
+    // Mở khóa toàn bộ chai - cho phép tương tác trở lại sau khi đổ xong
     private void UnlockAll()
     {
      levelbottles =  GameObject.FindGameObjectsWithTag("bottle");
